@@ -1,0 +1,15 @@
+{
+    "name": "LaTeX Dev Container",
+    "build": {
+        "context": "..",
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "james-yu.latex-workshop",
+                "tomoki1207.pdf"
+            ]
+        }
+    }
+}
