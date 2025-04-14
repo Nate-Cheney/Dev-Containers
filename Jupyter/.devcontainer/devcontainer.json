@@ -4,7 +4,8 @@
         "context": "..",
         "dockerfile": "Dockerfile"
     },
-    "postCreateCommand": "/bin/python3 -m ipykernel install --user --name=system_python --display-name='Python 3 (system)'",
+    "remoteUser": "root",
+    "postCreateCommand": "./.devcontainer/setup",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -16,8 +17,7 @@
                 "ms-python.vscode-pylance",
                 "ms-python.python",
                 "ms-python.debugpy",
-                "ms-toolsai.vscode-jupyter-powertoys",
-                "docker.docker"
+                "ms-toolsai.vscode-jupyter-powertoys"
             ],
             "settings": {
                 "python.defaultInterpreterPath": "/bin/python3"

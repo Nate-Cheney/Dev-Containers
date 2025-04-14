@@ -1,0 +1,3 @@
+#!/bin/bash
+/bin/python3 -m ipykernel install --user --name=system_python --display-name="Python 3 (system)"
+pip numpy pandas
