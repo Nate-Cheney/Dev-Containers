@@ -1,5 +1,5 @@
 {
-    "name": "Jupyter Dev Container",
+    "name": "Python Dev Container",
     "build": {
         "context": "..",
         "dockerfile": "Dockerfile"
