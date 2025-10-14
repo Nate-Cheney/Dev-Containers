@@ -4,6 +4,12 @@
         "context": "..",
         "dockerfile": "Dockerfile"
     },
+    {
+    "features": {
+        "ghcr.io/devcontainers-extra/features/tmux-apt-get:1": {}
+        "ghcr.io/devcontainers-extra/features/neovim-apt-get:1": {}
+        }
+    },
     "customizations": {
         "vscode": {
             "extensions": [
