@@ -7,5 +7,6 @@
     "features": {
         "ghcr.io/devcontainers-extra/features/tmux-apt-get:1": [],
         "ghcr.io/devcontainers-extra/features/neovim-apt-get:1": []
-    }
+    },
+    "postCreateCommand": "chmod +x script/setup && ./script/setup"
 }
