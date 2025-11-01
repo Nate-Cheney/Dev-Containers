@@ -9,7 +9,7 @@ cp /workspaces/resume/.devcontainer/.terminfo/x/xterm-kitty ~/.terminfo/x/
 # build-essential is required by nvim config
 echo "Updating package list and installing build tools..."
 apt-get update
-apt-get install -y build-essential
+apt-get install -y build-essential tree-sitter-cli
 
 # --- Neovim Setup ---
 NVIM_CONFIG_DIR="$HOME/.config/nvim"
