@@ -1,12 +1,19 @@
-FROM mcr.microsoft.com/devcontainers/base:ubuntu
+FROM debian:stable
 
-# Update package list and install necessary packages
-RUN apt update && \
-    apt install -y \
-    wget \
+RUN apt-get update && apt-get install -y curl \
     curl \
-    unzip \
+    git \
     python3 \
     python3-dev \
     python3-pip \
-    python3-venv
+    python3-venv \
+    sudo \
+    wget \
+    unzip
+
+# Create vscode user with homefolder and add to groups
+RUN useradd -m -s /bin/bash -G sudo vscode
+# Passwordless sudo
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+# Set default user
+USER vscode
