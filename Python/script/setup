@@ -24,6 +24,13 @@ echo "Updating package list and installing build tools..."
 sudo apt-get update
 sudo apt-get install -y build-essential tree-sitter-cli
 
+# --- Tmux Setup ---
+# Enable mouse support 
+if ! grep -q "set -g mouse on" "$HOME/.tmux.conf" 2>/dev/null; then
+  echo "Enabling Tmux mouse mode..."
+  echo "set -g mouse on" >> "$HOME/.tmux.conf"
+fi
+
 # --- Neovim Setup ---
 NVIM_CONFIG_DIR="$HOME/.config"
 PACKER_DIR="$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
